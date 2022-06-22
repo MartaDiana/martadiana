@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Marta Diana</title>
+  </head>
+  <body>
+    <!-- tag pembungkus vue -->
+    <div id="app">
+      <!-- header -->
+      <div class="header">
+        <h1 id="title">Marta Diana's Blog</h1>
+        <p id="description">A Simple Blog Created by Marta Diana</p>
+      </div>
+      <!-- end of header -->
+
+      <!-- main content -->
+      <div class="container">
+        <!-- main content -->
+        <div class="crud">
+          <h1>NEW POST.</h1>
+          <br />
+          <form action="" @submit.prevent="save">
+            <input type="text" placeholder=" Title" v-model="form.title" />
+            <input type="text" placeholder=" Your Post" v-model="form.body" />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <br />
+        <!-- end of main content -->
+
+        <!-- list post -->
+        <div class="crud">
+          <h1>LIST POST.</h1>
+          <br />
+          <ul v-for="posting in post">
+            <li>
+              <h3>{{posting.title}}</h3>
+              <p>{{posting.body}}</p>
+            </li>
+          </ul>
+        </div>
+        <!-- end of list post -->
+
+        <!-- Go To Page 2 for CRUD -->
+        <div class="homepage">
+            <a href="index.html"> << Home | </a>
+            <a href="page3.html">Search User >></a>
+        </div>
+        <!-- end of Go to Page 2 -->
+      </div>
+    </div>
+    <!-- tag pembungkus vue -->
+
+    <!-- vue js -->
+    <!-- Include file axios js -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.30/vue.global.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

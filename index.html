@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Marta Diana</title>
+  </head>
+  <body>
+    <!-- tag pembungkus vue -->
+    <div id="app">
+      <!-- header -->
+      <div class="header">
+        <h1 id="title">Marta Diana's Blog</h1>
+        <p id="description">A Simple Blog Created by Marta Diana</p>
+      </div>
+      <!-- end of header -->
+
+      <!-- main content -->
+      <div class="container">
+        <!-- main content -->
+        <div class="main-content">
+          <h1>BLOG POST.</h1>
+          <br />
+          <div class="post-content" v-for="posting in post">
+            <h2>{{posting.title}}</h2>
+            <hr />
+            <p>{{posting.body}}</p>
+          </div>
+        </div>
+        <!-- end of main content -->
+
+        <!-- comment section -->
+        <div class="comment-section">
+          <h1>COMMENTS.</h1>
+          <br />
+          <div class="comment" v-for="comment in comments">
+            <h3>A Comment from <span>{{comment.name}}</span></h3>
+            <p class="email">{{comment.email}}</p>
+            <p>{{comment.body}}</p>
+            <div class="line"></div>
+          </div>
+        </div>
+        <!-- end of comment section -->
+
+        <!-- Go To Page 2 for CRUD -->
+        <div class="pagetwo">
+          <a href="page2.html">Create Something New >> </a>
+        </div>
+        <!-- end of Go to Page 2 -->
+      </div>
+    </div>
+    <!-- tag pembungkus vue -->
+
+    <!-- vue js -->
+    <!-- Include file axios js -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.30/vue.global.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

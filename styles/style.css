@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/konser.jpg);
+  background-size: cover;
+  z-index: -1;
+  filter: grayscale(80%);
+}
+
+body {
+  font-family: PT Sans, sans-serif;
+}
+
+/* header */
+.header h1,
+.header p {
+  text-align: center;
+  color: rgb(187, 187, 187);
+}
+.header h1 {
+  margin-top: 20px;
+  font-size: 3em;
+}
+/* end of header */
+
+/*container */
+.container {
+  max-width: 65em;
+  background-color: rgba(44, 44, 44, 0.8);
+  margin: auto;
+  border-radius: 15px;
+  color: white;
+  padding: 30px 40px;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+/* end of container */
+
+/* main content */
+.main-content h1,
+.comment-section h1,
+.crud h1,
+.user h1 {
+  color: gray;
+  font-size: 3em;
+  font-weight: bolder;
+  letter-spacing: 5px;
+}
+
+.post-content {
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.post-content h2 {
+  color: rgb(187, 187, 187);
+}
+
+.post-content p {
+  color: rgb(193, 193, 193);
+  margin-top: 10px;
+}
+/* end of main content */
+
+/* comment section */
+.comment h3 {
+  color: grey;
+  font-weight: normal;
+}
+
+.comment h3 span {
+  color: rgb(187, 187, 187);
+  font-weight: bold;
+}
+
+.comment .email {
+  color: rgb(99, 99, 99);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.comment p {
+  color: rgb(175, 175, 175);
+}
+
+.line {
+  margin: 8px auto;
+  max-width: 100%;
+  height: 1px;
+  background-color: grey;
+}
+/* end of comment section */
+
+/* page 2 */
+.pagetwo {
+  margin-top: 25px;
+  text-align: right;
+}
+.pagetwo a,
+.homepage a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 13px;
+}
+
+.pagetwo a:hover {
+  color: rgb(157, 157, 157);
+}
+
+/* end of page 2 */
+.homepage {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.homepage a:hover {
+  color: rgb(157, 157, 157);
+}
+
+/* end of homepage */
+
+/* form  */
+form input {
+  display: block;
+  width: 37em;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border-style: none;
+}
+
+form input:first-child {
+  min-height: 30px;
+}
+
+form input:nth-child(2) {
+  min-height: 120px;
+}
+
+/* search user */
+.find-user input {
+  min-width: 35em;
+  min-height: 3em;
+  border-radius: 5px;
+}
+
+.user ul li {
+  list-style: none;
+}
+
+/* search user */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Marta Diana</title>
+  </head>
+  <body>
+    <!-- tag pembungkus vue -->
+    <div id="app">
+      <!-- header -->
+      <div class="header">
+        <h1 id="title">Marta Diana's Blog</h1>
+        <p id="description">A Simple Blog Created by Marta Diana</p>
+      </div>
+      <!-- end of header -->
+
+      <!-- main content -->
+      <div class="container">
+        <!-- main content -->
+        <div class="user">
+          <h1>FIND USER.</h1>
+          <br />
+          <div class="find-user">
+            <input type="text" name="search" placeholder=" Search User" v-model="cari" />
+          </div>
+          <ul>
+            <li class="user-list" v-for="user in filterUser">
+              <br />
+              <p class="nama-user">{{user.name}}</p>
+              <p class="email-user">{{user.email}}</p>
+              <p class="gender-status">{{user.gender}} | {{user.status}}</p>
+              <hr />
+            </li>
+          </ul>
+        </div>
+        <br />
+        <!-- end of main content -->
+
+        <!-- Go To Page 2 for CRUD -->
+        <div class="homepage">
+          <a href="index.html"> << Home | </a>
+          <a href="page2.html"> Update >> </a>
+        </div>
+        <!-- end of Go to Page 2 -->
+      </div>
+    </div>
+    <!-- tag pembungkus vue -->
+
+    <!-- vue js -->
+    <!-- Include file axios js -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.30/vue.global.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
