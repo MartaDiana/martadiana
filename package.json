@@ -1,6 +1,19 @@
 {
+  "name": "martadiana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "martadiana",
+  "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "type": "module"
+    "axios": "^0.27.2"
   }
 }
