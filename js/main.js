@@ -19,7 +19,9 @@ const app = Vue.createApp({
         return this.users;
       }
       return this.users.filter((user) => {
-        return Object.values(user).some((word) => String(word).toLowerCase().includes(query));
+        return Object.values(user).some((word) =>
+          String(word).toLowerCase().includes(query)
+        );
       });
     },
   },
@@ -52,13 +54,21 @@ const app = Vue.createApp({
     },
 
     async save() {
-      const response = axios.post("https://gorest.co.in/public/v2/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      console.log(1);
+      const response = await axios.post(
+        "https://gorest.co.in/public/v2/posts",
+        {
+          title: "test title",
         },
-      });
-      const data = await response.json();
+        {
+          headers: {
+            Authorization:
+              "Bearer d7666eb7b6d38314bb70a670b27047a3d80c9d8dac93bce2ee1a9bad2c608b14",
+          },
+        }
+      );
+      const data = response.data;
+
       this.form.title = "";
       this.form.body = "";
     },
