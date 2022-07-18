@@ -69,6 +69,7 @@ const app = Vue.createApp({
       );
       const data = response.data;
 
+      console.log(data);
       this.form.title = "";
       this.form.body = "";
     },
