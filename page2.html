@@ -23,7 +23,7 @@
         <div class="crud">
           <h1>NEW POST.</h1>
           <br />
-          <form action="" @submit.prevent="save">
+          <form action="" @submit.prevent="created">
             <input type="text" placeholder=" Title" v-model="form.title" />
             <input type="text" placeholder=" Your Post" v-model="form.body" />
             <button type="submit">Submit</button>
@@ -47,8 +47,8 @@
 
         <!-- Go To Page 2 for CRUD -->
         <div class="homepage">
-            <a href="index.html"> << Home | </a>
-            <a href="page3.html">Search User >></a>
+          <a href="index.html"> << Home | </a>
+          <a href="page3.html">Search User >></a>
         </div>
         <!-- end of Go to Page 2 -->
       </div>

@@ -36,6 +36,33 @@ const app = Vue.createApp({
     this.CommentLaod();
   },
 
+  created() {
+    // POST request using fetch with error handling
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ title: "Vue POST Request Example" }),
+    };
+    fetch("https://gorest.co.in//public/v2/users/1/posts", requestOptions)
+      .then(async (response) => {
+        const data = await response.json();
+
+        // check for error response
+        if (!response.ok) {
+          // get error message from body or default to response status
+          const error = (data && data.message) || response.status;
+          return Promise.reject(error);
+        }
+
+        this.form.title = "";
+        this.form.body = "";
+      })
+      .catch((error) => {
+        this.errorMessage = error;
+        console.error("There was an error!", error);
+      });
+  },
+
   methods: {
     async PostLoad() {
       const response = await fetch("https://gorest.co.in/public/v2/posts");
@@ -51,8 +78,9 @@ const app = Vue.createApp({
       console.log(data);
     },
 
+    /*
     async save() {
-      const response = axios.post("https://gorest.co.in/public/v2/posts", {
+      const response = await fetch("https://gorest.co.in/public/v2/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,7 +89,7 @@ const app = Vue.createApp({
       const data = await response.json();
       this.form.title = "";
       this.form.body = "";
-    },
+    },*/
   },
 });
 
