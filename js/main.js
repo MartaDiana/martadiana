@@ -58,7 +58,10 @@ const app = Vue.createApp({
       const response = await axios.post(
         "https://gorest.co.in/public/v2/posts",
         {
-          title: "test title",
+          user: this.users[0].name,
+          user_id: this.users[0].id,
+          title: "test title", // change this to get value from form
+          body: "test body", // change this to get value form form
         },
         {
           headers: {
@@ -72,6 +75,8 @@ const app = Vue.createApp({
       console.log(data);
       this.form.title = "";
       this.form.body = "";
+
+      this.post = [data, ...this.post];
     },
   },
 });
