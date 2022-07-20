@@ -82,18 +82,11 @@ const app = Vue.createApp({
 
     /*
     async save() {
-<<<<<<< HEAD
-      const response = await fetch("https://gorest.co.in/public/v2/posts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-=======
       console.log(1);
       const response = await axios.post(
         "https://gorest.co.in/public/v2/posts",
         {
           title: "test title",
->>>>>>> ffd630e7dd80fd9ea07d720931967c67f15e2bf2
         },
         {
           headers: {
