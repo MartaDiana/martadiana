@@ -58,8 +58,8 @@ const app = Vue.createApp({
         {
           user: this.users[0].name,
           user_id: this.users[0].id,
-          title: "Lorem Ipsum", // change this to get value from form
-          body: "lorem ipsum dolor sit amet", // change this to get value form form
+          title: "Lorem Ipsum", // try to change this to get value from form
+          body: "lorem ipsum dolor sit amet", // try to change this to get value form form
         },
         {
           headers: {
